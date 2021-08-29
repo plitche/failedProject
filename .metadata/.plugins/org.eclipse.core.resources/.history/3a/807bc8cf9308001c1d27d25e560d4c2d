@@ -1,0 +1,17 @@
+package com.project.resignation.testServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TestServiceImpl {
+
+	@Autowired
+	
+	
+	@Override
+	public void testServiceMethod1() {
+		System.out.println("123");
+	}
+	
+}

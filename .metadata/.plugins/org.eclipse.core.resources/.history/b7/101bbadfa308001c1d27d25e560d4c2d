@@ -1,0 +1,21 @@
+package com.project.resignation.testServiceImpl;
+
+import org.springframework.stereotype.Service;
+
+import com.project.resignation.testService.TestService;
+import com.sun.javafx.collections.MappingChange.Map;
+
+@Service("testService")
+public abstract class TestServiceImpl implements TestDao, TestService {
+
+	TestService testsevice = new TestService() {
+		
+		@Override
+		public Map<Object, Object> testServiceMethod1() throws Exception {
+			Map<Object, Object> testMap = testDbProcedure2();
+			
+			return testMap;
+		}
+	};
+	
+}

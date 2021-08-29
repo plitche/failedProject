@@ -1,0 +1,29 @@
+package com.project.resignation.testServiceImpl;
+
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.resignation.testService.TestService;
+import com.sun.javafx.collections.MappingChange.Map;
+
+@Service
+public class TestServiceImpl implements TestDao, TestService {
+
+	@Autowired
+	TestDao testDao;
+	
+	@Override
+	public Map<Object, Object> testServiceMethod1() throws Exception {
+		Map<Object, Object> testMap = testDao.testDbProcedure2();
+		return testMap;
+	}
+
+	@Override
+	public Map<Object, Object> testDbProcedure2() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
