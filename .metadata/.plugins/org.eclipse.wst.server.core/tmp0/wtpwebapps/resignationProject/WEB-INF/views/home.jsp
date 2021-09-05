@@ -11,5 +11,7 @@
 
 <P>  The time on the server is ${serverTime}. </P>
 
+<p>${test} this movingValue</p>
+
 </body>
 </html>

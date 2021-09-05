@@ -11,4 +11,10 @@ create table test3 (
 )
 
 insert into test3 values (3)
+insert into test3 values (4)
+select * from test3
+
+
+
+
 

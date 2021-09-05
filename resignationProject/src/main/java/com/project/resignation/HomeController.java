@@ -23,7 +23,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@Autowired(required=true)
+	@Autowired
 	TestService testService;
 	
 	/**
@@ -41,7 +41,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		Map<Object, Object> testMap = testService.testServiceMethod1();
+		int testMap = testService.testServiceMethod1();
 		model.addAttribute("test", testMap);
 		System.out.println(testMap);
 		return "home";
