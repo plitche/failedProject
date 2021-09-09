@@ -1,7 +1,0 @@
-package com.project.resignation.testServiceImpl;
-
-public interface TestDao {
-
-	public int testDbProcedure();
-	
-}
