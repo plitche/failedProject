@@ -1,0 +1,7 @@
+Create procedure test2 
+	iReturn int output
+iS
+BEGIN
+	declare iReturn int
+	set iReturn = 3
+END 

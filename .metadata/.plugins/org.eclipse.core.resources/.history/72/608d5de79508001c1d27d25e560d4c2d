@@ -1,0 +1,7 @@
+package com.project.resignation.mapper;
+
+public interface TestDao {
+
+	public int testDbProcedure();
+	
+}

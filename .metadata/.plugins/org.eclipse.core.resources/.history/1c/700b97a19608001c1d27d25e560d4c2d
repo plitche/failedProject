@@ -1,0 +1,20 @@
+package com.project.resignation.testServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.resignation.testService.TestService;
+
+@Service("testService")
+public abstract class TestServiceImpl implements TestDao, TestService {
+
+	@Autowired
+	private TestService testService;
+	
+	@Override
+	public void testServiceMethod1() {
+		testDbProcedure();
+		// xml 연결
+	}
+	
+}
