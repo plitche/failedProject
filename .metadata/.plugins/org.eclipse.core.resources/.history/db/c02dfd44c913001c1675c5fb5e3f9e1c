@@ -1,0 +1,216 @@
+-- SEQUENCE들
+CREATE SEQUENCE tbDiscussion;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbIdeaVoting;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbProject;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbStudy;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbSchedule;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbNeedParticipants;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbApplyParticipants;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbMessengerList;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbMessengerParticipants;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbMessenger;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbComment;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbSubComment;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbMainJob;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbSubJob;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE SEQUENCE tbTag;
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+-- CREATE TABLE
+
+-- 유저테이블
+CREATE TABLE tbMember (
+	vcMemberId 			 	VARCHAR(50) 		PRIMARY KEY,
+	vcMemberPw 			 	VARCHAR(30) 		NOT NULL,
+	vcMemberName 		 	VARCHAR(30) 		NOT NULL,
+	vcMemberNicname	 	VARCHAR(50) 		NOT NULL,
+	vcMemberAddress	 	VARCHAR(50) 		NOT NULL,
+	vcMemberPhone 		 	VARCHAR(30) 		NULL,
+	vcMemberAge 			 	VARCHAR(10) 		NULL,
+	vcMemberMBTI 		 	VARCHAR(20) 		NULL,
+	vcMemberTime 		 	VARCHAR(40) 		NOT NULL,
+	vcMemberIntroduce   	VARCHAR(2000) 		NOT NULL,
+	vcMemberEmail 		 	VARCHAR(50) 		UNIQUE NOT NULL,
+	vcMemberGender		 	VARCHAR(10) 		NOT NULL,
+	vcMemberLink1 		 	VARCHAR(30) 		NULL,
+	vcMemberLink2 		 	VARCHAR(30) 		NULL
+);
+
+-- 프로젝트 테이블
+CREATE TABLE tbProject (
+	nProjectNo 					NUMBER 				PRIMARY KEY,
+	vcMemberId				VARCHAR(50) 			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
+	vcLocation					VARCHAR(50) 			NULL,
+	vcTime						VARCHAR(50)			NULL,
+	dtStartDate					DATE						NOT NULL,
+	dtEndDate					DATE						NOT NULL,
+	dtRegDate					DATE						NOT NULL,
+	vcProcess					VARCHAR(50)			NOT NULL,
+	iStatus						VARCHAR(50)			NOT NULL,
+	vcSubject					VARCHAR(50)			NOT NULL,
+	vcContent					VARCHAR(1000)		NOT NULL
+);
+
+-- 스터디 테이블
+CREATE TABLE tbStudy (
+	nStudyNo					NUMBER					PRIMARY KEY,
+	vcMemberId				VARCHAR(50) 			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
+	vcLocation					VARCHAR(50) 			NULL,
+	vcTime						VARCHAR(50)			NULL,
+	dtStartDate					DATE						NOT NULL,
+	dtEndDate					DATE						NOT NULL,
+	dtRegDate					DATE						NOT NULL,
+	vcProcess					VARCHAR(50)			NOT NULL,
+	iStatus						VARCHAR(50)			NOT NULL,
+	vcSubject					VARCHAR(50)			NOT NULL,
+	vcContent					VARCHAR(1000)		NOT NULL
+);
+
+-- 토론 테이블
+CREATE TABLE tbDiscussion (
+	nDiscussNo					NUMBER					PRIMARY KEY,
+	vcMemberId				VARCHAR(50) 			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
+	vcDiscussTheme			VARCHAR(100)		NOT NULL,
+	vcDiscussTitle				VARCHAR(150)		NOT NULL,
+	dtStartDate					DATE						NOT NULL,
+	dtEndDate					DATE						NOT NULL,
+	dtRegDate					DATE						NOT NULL,
+	vcDiscussContent			VARCHAR(1000)		NOT NULL,
+	vcDiscussChanger			VARCHAR(30)			NOT NULL,
+	vcDiscussChangeDate	DATE						NOT NULL,
+	vcDiscussStatus			VARCHAR(5)			NOT NULL
+);
+
+-- 아이디어 투표 테이블
+CREATE TABLE tbIdeaVoting (
+	nIdeaNo						NUMBER					PRIMARY KEY,
+	vcMemberId				VARCHAR(50) 			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
+	vcIdeaTheme				VARCHAR(50)			NOT NULL,
+	vcIdeaTitle					VARCHAR(100)		NOT NULL,
+	vcIdeaContent				VARCHAR(1500)		NOT NULL,
+	dtStartDate					DATE						NOT NULL,
+	dtEndDate					DATE						NOT NULL,
+	dtRegDate					DATE						NOT NULL,
+	vcIdeaChangeDate		DATE						NOT NULL,
+	vcIdeaChanger				VARCHAR(30)			NOT NULL,
+	vcIdeaStatus				VARCHAR(5)			NOT NULL
+);
+
+-- 주직무
+
+
+-- 부직무
+
+
+-- 흥미분야
+
+
+-- 프로젝트/스터디 찜리스트
+
+
+-- 댓글
+
+
+-- 대댓글
+
+
+-- 프로젝트/스터디 일정
+
+
+-- 프로젝트/스터디 참가자
+
+
+-- 참가 희망자
+
+
+-- 대화목록 리스트
+
+
+-- 대화 참가자 리스트
+
+
+-- 대화 메신저
+
+
+-- 아이디어 투표 선택지
+
+
+-- 첨부파일
+
+
+-- 공유 수
+
+
+-- 좋아요/싫어요
+
+
+-- 조회수
+
+
+-- 태그
+
+
+
+
+
+
+
+
