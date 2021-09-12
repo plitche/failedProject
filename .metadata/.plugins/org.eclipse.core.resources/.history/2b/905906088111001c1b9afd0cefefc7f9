@@ -1,0 +1,24 @@
+package com.project.resignation.daoImpl;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.resignation.testService.TestService;
+
+@Service("testService")
+public class TestDaoImpl implements TestService {
+	
+	@Autowired
+	SqlSession sqlsession;
+	
+	@Override
+	public Map<Object, Object> testServiceMethod1() throws SQLException {
+		Map<Object, Object> testMap = sqlsession.selectOne("testDao.testDbProcedure2");
+		return testMap;
+	}
+	
+}

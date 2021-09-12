@@ -1,0 +1,11 @@
+package com.project.resignation.mapper;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public interface TestDao {
+
+	@Autowired
+	SqlSession sqlSession;
+	
+}

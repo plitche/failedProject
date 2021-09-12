@@ -1,0 +1,9 @@
+package com.project.resignation.testService;
+
+import org.springframework.stereotype.Service;
+
+public interface TestService {
+
+	public void testServiceMethod1() throws Exception;
+	
+}

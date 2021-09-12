@@ -1,0 +1,9 @@
+package com.project.resignation.testServiceImpl;
+
+import java.util.Map;
+
+public interface TestDao {
+
+	public Map<String, String> testDbProcedure2() throws Exception;
+	
+}

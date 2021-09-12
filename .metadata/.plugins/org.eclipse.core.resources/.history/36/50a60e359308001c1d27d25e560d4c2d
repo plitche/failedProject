@@ -1,0 +1,10 @@
+package com.project.resignation.testServiceImpl;
+
+public class testServiceImpl {
+
+	@Override
+	public void testServiceMethod1() {
+		System.out.println("123");
+	}
+	
+}

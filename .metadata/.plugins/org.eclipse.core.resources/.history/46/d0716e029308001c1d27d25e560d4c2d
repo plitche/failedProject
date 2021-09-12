@@ -1,0 +1,5 @@
+package com.project.resignation.testService;
+
+public interface testService {
+
+}
