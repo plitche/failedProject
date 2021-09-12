@@ -1,9 +1,0 @@
-package com.project.resignation.testServiceImpl;
-
-import com.sun.javafx.collections.MappingChange.Map;
-
-public interface TestDao {
-
-	public Map<Object, Object> testDbProcedure2(int age);
-	
-}

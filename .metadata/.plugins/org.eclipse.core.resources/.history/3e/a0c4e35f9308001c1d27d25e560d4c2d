@@ -1,7 +1,0 @@
-package com.project.resignation.testService;
-
-public interface testService {
-
-	public void testServiceMethod1() throws Exception;
-	
-}

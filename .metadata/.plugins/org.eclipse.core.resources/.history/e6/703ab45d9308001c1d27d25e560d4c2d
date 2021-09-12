@@ -1,9 +1,0 @@
-package com.project.resignation.testServiceImpl;
-
-public class testServiceImpl {
-
-	public void testServiceMethod1() {
-		System.out.println("123");
-	}
-	
-}

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.project.resignation.testService.TestService;
-import java.util.Map;
 
 /**
  * Handles requests for the application home page.
@@ -23,7 +22,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@Autowired(required=true)
+	@Autowired
 	TestService testService;
 	
 	/**
@@ -41,9 +40,9 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		Map<Object, Object> testMap = testService.testServiceMethod1();
-		model.addAttribute("test", testMap);
-		System.out.println(testMap);
+		int test = testService.testServiceMethod1();
+		model.addAttribute("test", test);
+		System.out.println(test);
 		return "home";
 	}
 	
