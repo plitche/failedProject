@@ -1,8 +1,2 @@
-INDEX VERSION 1.4+C:\Users\wjdgh\Desktop\Development\resignationProject\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3348520775.index
+INDEX VERSION 1.4+C:\Users\Yongsoo Kwon\Desktop\Plitche\resignationProject\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 465307743.index
-1823430051.index
-2029020638.index
-2383890699.index
-2988203231.index
-1314740854.index
