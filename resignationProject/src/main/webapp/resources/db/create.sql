@@ -1,102 +1,102 @@
 -- SEQUENCE들
 
 -- 토론 시퀀스
-CREATE SEQUENCE tbDiscussion;
+CREATE SEQUENCE tbDiscussion_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 아이디어투표 시퀀스
-CREATE SEQUENCE tbIdeaVoting;
+CREATE SEQUENCE tbIdeaVoting_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트 시퀀스
-CREATE SEQUENCE tbProject;
+CREATE SEQUENCE tbProject_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 스터디 시퀀스
-CREATE SEQUENCE tbStudy;
+CREATE SEQUENCE tbStudy_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 일정시퀀스
-CREATE SEQUENCE tbSchedule;
+CREATE SEQUENCE tbSchedule_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트/스터디 필요참가자 스퀀스
-CREATE SEQUENCE tbNeedParticipants;
+CREATE SEQUENCE tbNeedParticipants_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 참가 희망자 스퀀스
-CREATE SEQUENCE tbApplyParticipants;
+CREATE SEQUENCE tbApplyParticipants_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화목록 리스크 시퀀스
-CREATE SEQUENCE tbMessengerList;
+CREATE SEQUENCE tbMessengerList_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화참가자리스크 스퀀스
-CREATE SEQUENCE tbMessengerParticipants;
+CREATE SEQUENCE tbMessengerParticipants_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화내용 스퀀스
-CREATE SEQUENCE tbMessenger;
+CREATE SEQUENCE tbMessenger_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 댓글 시퀀스
-CREATE SEQUENCE tbComment;
+CREATE SEQUENCE tbComment_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대댓글 시퀀스
-CREATE SEQUENCE tbSubComment;
+CREATE SEQUENCE tbSubComment_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 주직무 시퀀스
-CREATE SEQUENCE tbMainJob;
+CREATE SEQUENCE tbMainJob_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 부직무 시퀀스
-CREATE SEQUENCE tbSubJob;
+CREATE SEQUENCE tbSubJob_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 태그 시퀀스
-CREATE SEQUENCE tbTag;
+CREATE SEQUENCE tbTag_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트/스터디 찜리스트 시퀀스
-CREATE SEQUENCE tbSavedList;
+CREATE SEQUENCE tbSavedList_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 첨부파일 시퀀스
-CREATE SEQUENCE tbAttachment;
+CREATE SEQUENCE tbAttachment_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 공유수 시퀀스
-CREATE SEQUENCE tbShare;
+CREATE SEQUENCE tbShare_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 좋아요/싫어요 시퀀스
-CREATE SEQUENCE tbGoodBad;
+CREATE SEQUENCE tbGoodBad_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 조회수 시퀀스
-CREATE SEQUENCE tbHit;
+CREATE SEQUENCE tbHit_Seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
@@ -211,7 +211,7 @@ CREATE TABLE tbInterestField (
 	vcField3						VARCHAR(30)			NULL,
 	vcField4						VARCHAR(30)			NULL,
 	vcField5						VARCHAR(30)			NULL,
-	vcField6						VARCHAR(30)			NULL,
+	vcField6						VARCHAR(30)			NULL
 );
 
 -- 프로젝트/스터디 찜리스트
@@ -228,7 +228,7 @@ CREATE TABLE tbComment (
 	nPostReferType			NUMBER					NOT NULL,
 	vcCommentContent		VARCHAR(1500)		NULL,
 	dtCommentCreated		DATE						NOT NULL,
-	dtCommentUpdated		DATE						NOT NULL,
+	dtCommentUpdated		DATE						NOT NULL
 );
 
 -- 대댓글
@@ -238,8 +238,7 @@ CREATE TABLE tbSubComment (
 	vcSubCommentId			VARCHAR(50)			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
 	vcSubCommentContent	VARCHAR(1000)		NULL,
 	dtSubCommentCreated	DATE						NOT NULL,
-	dtSubCommentUpdated	DATE						NOT NULL,
-	
+	dtSubCommentUpdated	DATE						NOT NULL
 );
 
 -- 프로젝트/스터디 일정
@@ -259,9 +258,9 @@ CREATE TABLE tbNeedParticipants (
 	iNeedParticipantsNo		NUMBER					PRIMARY KEY,
 	vcNeedParticipantsId		VARCHAR(50)			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
 	nPostReferNo 				NUMBER					NOT NULL,
-	nPostReferType			NUMBER					NOT NULL
+	nPostReferType			NUMBER					NOT NULL,
 	dtParticipateDate			DATE						NOT NULL,
-	vcPosition					VARCHAR(50)			NOT NULL,
+	vcPosition					VARCHAR(50)			NOT NULL
 );
 
 -- 참가 희망자
@@ -269,17 +268,17 @@ CREATE TABLE tbApplyParticipants (
 	iApplyParticipantsNo		NUMBER					PRIMARY KEY,
 	vcApplyParticipantsId		VARCHAR(50)			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
 	nPostReferNo				NUMBER					NOT NULL,
-	nPostReferType			NUMBER					NOT NULL
+	nPostReferType			NUMBER					NOT NULL,
 	dtParticipateDate			DATE						NOT NULL,
-	vcPosition					VARCHAR(50)			NOT NULL,
+	vcPosition					VARCHAR(50)			NOT NULL
 );
 
 -- 대화목록 리스트
 CREATE TABLE tbMessengerList (
 	iMessListNo					NUMBER					PRIMARY KEY,
 	nPostReferNo				NUMBER					NOT NULL,
-	nPostReferType			NUMBER					NOT NULL
-	dtLastUpdateDate			DATE						NOT NULL,
+	nPostReferType			NUMBER					NOT NULL,
+	dtLastUpdateDate			DATE						NOT NULL
 );
 
 -- 대화 참가자 리스트
@@ -287,7 +286,7 @@ CREATE TABLE tbMessengerParticipants (
 	iMessParicipantsNo		NUMBER					PRIMARY KEY,
 	vcMessParticiPantsId		VARCHAR(50)			REFERENCES tbMember(vcMemberId) ON DELETE CASCADE NOT NULL,
 	nPostReferNo				NUMBER					NOT NULL,
-	nPostReferType			NUMBER					NOT NULL,
+	nPostReferType			NUMBER					NOT NULL
 );
 
 -- 대화 메신저
@@ -350,13 +349,6 @@ CREATE TABLE tbHit (
 CREATE TABLE tbTag (
 	iTagNo						NUMBER					PRIMARY KEY,
 	nPostReferNo				NUMBER					NOT NULL,
-	nPostReferType			NUMBER					NOT NULL
-	vcTag							VARCHAR(50)			NOT NULL,
+	nPostReferType			NUMBER					NOT NULL,
+	vcTag							VARCHAR(50)			NOT NULL
 );
-
-
-
-
-
-
-

@@ -22,25 +22,23 @@ DROP TABLE tbStudy;
 DROP TABLE tbProject;
 DROP TABLE tbMember;
 
-DROP TABLE SEQUENCE tbDiscussion;
-DROP TABLE SEQUENCE tbIdeaVoting;
-DROP TABLE SEQUENCE tbProject;
-DROP TABLE SEQUENCE tbStudy;
-DROP TABLE SEQUENCE tbSchedule;
-DROP TABLE SEQUENCE tbNeedParticipants;
-DROP TABLE SEQUENCE tbApplyParticipants;
-DROP TABLE SEQUENCE tbMessengerList;
-DROP TABLE SEQUENCE tbMessengerParticipants;
-DROP TABLE SEQUENCE tbMessenger;
-DROP TABLE SEQUENCE tbComment;
-DROP TABLE SEQUENCE tbSubComment;
-DROP TABLE SEQUENCE tbMainJob;
-DROP TABLE SEQUENCE tbSubJob;
-DROP TABLE SEQUENCE tbTag;
-
-
-
-
-
-
-
+DROP SEQUENCE tbDiscussion_Seq;
+DROP SEQUENCE tbIdeaVoting_Seq;
+DROP SEQUENCE tbProject_Seq;
+DROP SEQUENCE tbStudy_Seq;
+DROP SEQUENCE tbSchedule_Seq;
+DROP SEQUENCE tbNeedParticipants_Seq;
+DROP SEQUENCE tbApplyParticipants_Seq;
+DROP SEQUENCE tbMessengerList_Seq;
+DROP SEQUENCE tbMessengerParticipants_Seq;
+DROP SEQUENCE tbMessenger_Seq;
+DROP SEQUENCE tbComment_Seq;
+DROP SEQUENCE tbSubComment_Seq;
+DROP SEQUENCE tbMainJob_Seq;
+DROP SEQUENCE tbSubJob_Seq;
+DROP SEQUENCE tbTag_Seq;
+DROP SEQUENCE tbSavedList_Seq;
+DROP SEQUENCE tbAttachment_Seq;
+DROP SEQUENCE tbShare_Seq;
+DROP SEQUENCE tbGoodBad_Seq;
+DROP SEQUENCE tbHit_Seq;
