@@ -100,8 +100,10 @@ CREATE SEQUENCE tbHit;
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
+-- ************ 유저  아이디 변경한 것 erdcloud에 업데이트하고
+-- ************ 주직무부터 체킹하자!
 
--- CREATE TABLE --
+-- CREATE TABLE
 
 -- 유저
 CREATE TABLE tbMember (
@@ -114,7 +116,7 @@ CREATE TABLE tbMember (
 	vcMemberAge 			 	VARCHAR(10) 		NULL,
 	vcMemberMBTI 		 	VARCHAR(20) 		NULL,
 	vcMemberTime 		 	VARCHAR(40) 		NOT NULL,
-	vcMemberIntroduce   	VARCHAR(2000) 	NOT NULL,
+	vcMemberIntroduce   	VARCHAR(2000) 		NOT NULL,
 	vcMemberEmail 		 	VARCHAR(50) 		UNIQUE NOT NULL,
 	vcMemberGender		 	VARCHAR(10) 		NOT NULL,
 	vcMemberLink1 		 	VARCHAR(30) 		NULL,
