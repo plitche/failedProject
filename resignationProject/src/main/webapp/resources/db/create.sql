@@ -1,102 +1,182 @@
 -- SEQUENCE들
 
 -- 토론 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbDiscussion_seq
+=======
+CREATE SEQUENCE tbDiscussion_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 아이디어투표 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbIdeaVoting_seq
+=======
+CREATE SEQUENCE tbIdeaVoting_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbProject_seq
+=======
+CREATE SEQUENCE tbProject_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 스터디 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbStudy_seq
+=======
+CREATE SEQUENCE tbStudy_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 일정시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbSchedule_seq
+=======
+CREATE SEQUENCE tbSchedule_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트/스터디 필요참가자 스퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbNeedParticipants_seq
+=======
+CREATE SEQUENCE tbNeedParticipants_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 참가 희망자 스퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbApplyParticipants_seq
+=======
+CREATE SEQUENCE tbApplyParticipants_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화목록 리스크 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbMessengerList_seq
+=======
+CREATE SEQUENCE tbMessengerList_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화참가자리스크 스퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbMessengerParticipants_seq
+=======
+CREATE SEQUENCE tbMessengerParticipants_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대화내용 스퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbMessenger_seq
+=======
+CREATE SEQUENCE tbMessenger_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 댓글 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbComment_seq
+=======
+CREATE SEQUENCE tbComment_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 대댓글 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbSubComment_seq
+=======
+CREATE SEQUENCE tbSubComment_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 주직무 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbMainJob_seq
+=======
+CREATE SEQUENCE tbMainJob_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 부직무 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbSubJob_seq
+=======
+CREATE SEQUENCE tbSubJob_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 태그 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbTag_seq
+=======
+CREATE SEQUENCE tbTag_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 프로젝트/스터디 찜리스트 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbSavedList_seq
+=======
+CREATE SEQUENCE tbSavedList_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 첨부파일 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbAttachment_seq
+=======
+CREATE SEQUENCE tbAttachment_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 공유수 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbShare_seq
+=======
+CREATE SEQUENCE tbShare_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 좋아요/싫어요 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbGoodBad_seq
+=======
+CREATE SEQUENCE tbGoodBad_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
 -- 조회수 시퀀스
+<<<<<<< HEAD
 CREATE SEQUENCE tbHit_seq
+=======
+CREATE SEQUENCE tbHit_Seq
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 START WITH 1
 INCREMENT BY 1
 NOCACHE;
@@ -239,7 +319,10 @@ CREATE TABLE tbSubComment (
 	vcSubCommentContent	VARCHAR(1000)		NULL,
 	dtSubCommentCreated	DATE						NOT NULL,
 	dtSubCommentUpdated	DATE						NOT NULL
+<<<<<<< HEAD
 	
+=======
+>>>>>>> cb7f7b45a519054837f159d2da748d8bbd66edbc
 );
 
 -- 프로젝트/스터디 일정
@@ -353,10 +436,3 @@ CREATE TABLE tbTag (
 	nPostReferType			NUMBER					NOT NULL,
 	vcTag							VARCHAR(50)			NOT NULL
 );
-
-
-
-
-
-
-
