@@ -1,0 +1,9 @@
+package com.project.resignation.testServiceImpl;
+
+import java.sql.SQLException;
+
+public interface TestDao {
+
+	public String testDbProcedure2() throws SQLException;
+	
+}

@@ -1,4 +1,0 @@
-#Tomcat publish data
-#Sun Aug 29 15:02:42 KST 2021
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Yongsoo\ Kwon\\.m2\\repository\\org\\springframework\\spring-web\\5.1.4.RELEASE\\spring-web-5.1.4.RELEASE.jar=C\:\\KoreaITAcademy\\install\\spring-tool-suite-3.9.3.RELEASE-e4.7.3-win32-x86_64\\sts-bundle\\pivotal-tc-server-developer-3.2.9.RELEASE\\base-instance\\wtpwebapps\\resignationProject\\WEB-INF\\lib\\spring-web-5.1.4.RELEASE.jar
-org.eclipse.jst.jee.server\:resignationProject=C\:\\KoreaITAcademy\\install\\spring-tool-suite-3.9.3.RELEASE-e4.7.3-win32-x86_64\\sts-bundle\\pivotal-tc-server-developer-3.2.9.RELEASE\\base-instance\\wtpwebapps\\resignationProject

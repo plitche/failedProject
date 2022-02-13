@@ -20,3 +20,5 @@ tagAttributeValue=\#17C6A3 | null | false | true | false | false
 tagBorder=\#0080ff | null | false | false | false | false
 tagName=\#03a8d8 | null | true | false | false | false
 xmlContent=\#D9E8F7 | null | false | false | false | false
+xml_content_assist_default_page_sort_order=org.eclipse.wst.xml.ui.proposalCategory.xmlTags\u0000org.eclipse.wst.xml.ui.proposalCategory.xmlTemplates\u0000
+xml_content_assist_own_page_sort_order=org.eclipse.wst.xml.ui.proposalCategory.xmlTemplates\u0000org.eclipse.wst.xml.ui.proposalCategory.xmlTags\u0000

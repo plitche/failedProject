@@ -1,0 +1,10 @@
+package com.project.resignation.daoImpl;
+
+import org.springframework.stereotype.Repository;
+
+import com.project.resignation.dao.TestDao;
+
+@Repository
+public class TestDaoImpl implements TestDao {
+
+}
